@@ -4,28 +4,28 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
 	<title>Storytelling Side Panel</title>
-    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.0/js/dojo/dijit/themes/tundra/tundra.css">
-    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.0/js/esri/dijit/css/Popup.css"> 
+    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.1/js/dojo/dijit/themes/tundra/tundra.css">
+    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.1/js/esri/dijit/css/Popup.css">
     <link rel="stylesheet" type="text/css" href="css/layout.css"/>
     <link rel="stylesheet" type="text/css" href="css/popup.css"/>
-    
+
     <script type="text/javascript">
       var djConfig = {
         parseOnLoad: true
       };
     </script>
-    <script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=3.0compact"></script>
+    <script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=3.1compact"></script>
 	<script type="text/javascript" src="javascript/map.js"></script>
     <script type="text/javascript" src="javascript/layout.js"></script>
     <script type="text/javascript">
     var configOptions;
-    
+
     function init(){
-    
+
       configOptions = {
         //The ID for the map from ArcGIS.com
         webmaps : [{
-			"id" : "e5359a951a5b4b1dacff6f4c79cda9e7"
+			"id" : "d4270a89788a4a46877dd19d5569d9ee"
 		}],
         //Enter a title, if no title is specified, the webmap's title is used.
         title : "",
@@ -49,19 +49,19 @@
         bingmapskey : "",
         //specify a proxy url if needed
         proxyurl:"",
-        //specify the url to a geometry service 
+        //specify the url to a geometry service
         geometryserviceurl:"http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
        //Modify this to point to your sharing service URL if you are using the portal
         sharingurl :"http://arcgis.com/sharing/content/items"
       };
-      
+
        initMap();
    }
 
-      //show map on load 
+      //show map on load
       dojo.addOnLoad(init);
     </script>
-    
+
     <!--Social Media Links-->
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "77225c91-2742-42f7-b1b4-bddda99a9bde"}); </script>
@@ -83,10 +83,10 @@
 
   <body onResize="resetLayout()" class="tundra">
     <div id="mainWindow" dojotype="dijit.layout.BorderContainer" design="headline" gutters="false">
-    
+
       <!--Banner-->
       <div id="banner" dojotype="dijit.layout.BorderContainer" gutters="false" region="top">
-      
+
         <!--Header-->
       	<div id="headerArea" dojotype="dijit.layout.BorderContainer" region="top">
           <div id="titleText" dojotype="dijit.layout.ContentPane" region="center">
@@ -98,21 +98,21 @@
             <div id="logo"><a id="logoLink" href="http://www.esri.com" target="_blank"><img id="logoImg" src="images/esriGlobeLogow.png" alt="Esri - Home"></a></div>
           </div><!--/logoArea-->
         </div><!--/header-->
-        
+
         <!--Time Slider-->
         <div id="timeSliderArea" dojotype="dijit.layout.ContentPane" region="center">
         	<div id="timeSliderDiv"></div>
         </div><!--/timeSliderArea-->
-        
+
         <!--Tab Area-->
         <div id="tabArea" dojotype="dijit.layout.ContentPane" region="bottom">
         </div><!--/tabArea-->
-      
+
       </div><!--/banner-->
-      
+
       <!--Content-->
       <div id="content" dojotype="dijit.layout.BorderContainer" gutters="false" region="center">
-      
+
       	<!--Sidebar Section-->
         <div dojotype="dijit.layout.ContentPane" id="leftPane" region="left">
           <div id="descriptionPanel">
@@ -123,17 +123,17 @@
           <div id="legendPanel">
           </div><!--/legendPanel-->
         </div><!--/leftPane-->
-        
+
         <!--Map Section-->
         <div dojotype="dijit.layout.ContentPane" id="mapPane" region="center">
         	<div id="mapBlind"></div>
             <div id="timeDisplay"></div>
         </div><!--mapPane-->
-            
+
       </div><!--/content-->
-    
+
     </div><!--/main-->
-    
+
     <!--Loading Panel-->
     <div id="loadingCon">
     	<div id="loadingDialog">
@@ -142,7 +142,7 @@
     		<img id="loadingImg" alt="" src="images/progressBar.gif">
    		</div>
     </div>
-    
-    
+
+
   </body>
 </html>
